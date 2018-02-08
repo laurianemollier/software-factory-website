@@ -1,0 +1,35 @@
+@import views.html._
+
+@()(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarAssets: WebJarAssets)
+
+@layout.layout(Messages("home.title"), None) {
+
+
+    <section class="ls section_padding_top_100 section_padding_bottom_100">
+        <div class="container">
+
+
+            <h3 class="section_header big text-center">
+
+            </h3>
+
+            <div class="row">
+
+                <div class="col-sm-7 col-md-8 col-lg-8 col-sm-push-5 col-md-push-4 col-lg-push-4">
+                    @tutorials.installPlay.main()
+
+                </div>
+                    <!--eof .col-sm-8 (main content)-->
+
+                    <!-- sidebar -->
+                <aside class="col-sm-5 col-md-4 col-lg-4 col-sm-pull-7 col-md-pull-8 col-lg-pull-8">
+                    @tutorials.installPlay.sidebar()
+                </aside>
+                    <!-- eof aside sidebar -->
+            </div>
+        </div>
+    </section>
+
+}
+
+
