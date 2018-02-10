@@ -23,3 +23,4 @@ class CustomUnsecuredErrorHandler extends UnsecuredErrorHandler {
     Future.successful(Redirect(controllers.pages.routes.ApplicationController.index()))
   }
 }
+

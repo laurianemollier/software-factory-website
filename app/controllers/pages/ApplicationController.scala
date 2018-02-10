@@ -1,12 +1,12 @@
-package controllers.pages
+package controllers
 
 import javax.inject.Inject
 
+import com.mohiva.play.silhouette.api.actions.SecuredRequest
 import com.mohiva.play.silhouette.api.{ LogoutEvent, Silhouette }
-import com.mohiva.play.silhouette.impl.providers.SocialProviderRegistry
-import controllers.{ WebJarAssets, pages }
-import play.api.i18n.{ I18nSupport, MessagesApi }
-import play.api.mvc.{ Action, AnyContent, Controller }
+import org.webjars.play.WebJarsUtil
+import play.api.i18n.I18nSupport
+import play.api.mvc.{ AbstractController, AnyContent, ControllerComponents }
 import utils.auth.DefaultEnv
 
 import scala.concurrent.Future
@@ -14,39 +14,37 @@ import scala.concurrent.Future
 /**
  * The basic application controller.
  *
- * @param messagesApi            The Play messages API.
- * @param silhouette             The Silhouette stack.
- * @param socialProviderRegistry The social provider registry.
- * @param webJarAssets           The webjar assets implementation.
+ * @param components  The Play controller components.
+ * @param silhouette  The Silhouette stack.
+ * @param webJarsUtil The webjar util.
+ * @param assets      The Play assets finder.
  */
 class ApplicationController @Inject() (
-  val messagesApi: MessagesApi,
-  silhouette: Silhouette[DefaultEnv],
-  socialProviderRegistry: SocialProviderRegistry,
-  implicit val webJarAssets: WebJarAssets)
-  extends Controller with I18nSupport {
+  components: ControllerComponents,
+  silhouette: Silhouette[DefaultEnv]
+)(
+  implicit
+  webJarsUtil: WebJarsUtil,
+  assets: AssetsFinder
+) extends AbstractController(components) with I18nSupport {
 
   /**
    * Handles the index action.
    *
    * @return The result to display.
    */
-  def index: Action[AnyContent] = Action.async { implicit request =>
-    Future.successful(Ok(views.html.home.home()))
+  def index = silhouette.SecuredAction.async { implicit request: SecuredRequest[DefaultEnv, AnyContent] =>
+    Future.successful(Ok(views.html.home.home(request.identity)))
   }
-  //  def index: Action[AnyContent] = silhouette.SecuredAction.async { implicit request =>
-  //    Future.successful(Ok(views.html.home_(request.identity)))
-  //  }
 
   /**
    * Handles the Sign Out action.
    *
    * @return The result to display.
    */
-  def signOut: Action[AnyContent] = silhouette.SecuredAction.async { implicit request =>
+  def signOut = silhouette.SecuredAction.async { implicit request: SecuredRequest[DefaultEnv, AnyContent] =>
     val result = Redirect(pages.routes.ApplicationController.index())
     silhouette.env.eventBus.publish(LogoutEvent(request.identity, request))
     silhouette.env.authenticatorService.discard(request.authenticator, result)
   }
-
 }
