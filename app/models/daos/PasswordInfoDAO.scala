@@ -13,6 +13,8 @@ import slick.driver.JdbcProfile
 import slick.jdbc.JdbcBackend
 import slick.lifted.TableQuery
 
+import slick.lifted.Query
+
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 
