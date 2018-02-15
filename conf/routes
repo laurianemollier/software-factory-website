@@ -3,38 +3,26 @@
 # ~~~~
 
 # Home page
+GET         /                                controllers.pages.ApplicationController.index
+GET         /signOut                         controllers.pages.ApplicationController.signOut
+GET         /authenticate/:provider          controllers.auth.SocialAuthController.authenticate(provider)
 
+GET         /signUp                          controllers.auth.SignUpController.view
+POST        /signUp                          controllers.auth.SignUpController.submit
 
-GET         /contact                        controllers.pages.Contact.view
-POST        /contact                        controllers.pages.Contact.submit
+GET         /signIn                          controllers.auth.SignInController.view
+POST        /signIn                          controllers.auth.SignInController.submit
 
-GET         /                               controllers.pages.ApplicationController.index
-GET         /signOut                        controllers.pages.ApplicationController.signOut
-GET         /authenticate/:provider         controllers.auth.SocialAuthController.authenticate(provider)
+GET         /password/forgot                 controllers.auth.ForgotPasswordController.view
+POST        /password/forgot                 controllers.auth.ForgotPasswordController.submit
+GET         /password/reset/:token           controllers.auth.ResetPasswordController.view(token: java.util.UUID)
+POST        /password/reset/:token           controllers.auth.ResetPasswordController.submit(token: java.util.UUID)
+GET         /password/change                 controllers.auth.ChangePasswordController.view
+POST        /password/change                 controllers.auth.ChangePasswordController.submit
 
-GET         /signUp                         controllers.auth.SignUpController.view
-POST        /signUp                         controllers.auth.SignUpController.submit
+GET         /account/email/:email            controllers.auth.ActivateAccountController.send(email: String)
+GET         /account/activate/:token         controllers.auth.ActivateAccountController.activate(token: java.util.UUID)
 
-GET         /signIn                         controllers.auth.SignInController.view
-POST        /signIn                         controllers.auth.SignInController.submit
-
-GET         /password/forgot                controllers.auth.ForgotPasswordController.view
-POST        /password/forgot                controllers.auth.ForgotPasswordController.submit
-GET         /password/reset/:token          controllers.auth.ResetPasswordController.view(token: java.util.UUID)
-POST        /password/reset/:token          controllers.auth.ResetPasswordController.submit(token: java.util.UUID)
-GET         /password/change                controllers.auth.ChangePasswordController.view
-POST        /password/change                controllers.auth.ChangePasswordController.submit
-
-GET         /account/email/:email           controllers.auth.ActivateAccountController.send(email: String)
-GET         /account/activate/:token        controllers.auth.ActivateAccountController.activate(token: java.util.UUID)
-
-
-# prefix must match `play.assets.urlPrefix`
-GET         /assets/*file                   controllers.Assets.at(file)
-GET         /versionedAssets/*file          controllers.Assets.versioned(file)
-
-
-#GET         /assets/*file                    controllers.Assets.versioned(file)
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file                    controllers.Assets.versioned(file)
 ->          /webjars                         webjars.Routes
-
-GET         /scala/install-play             controllers.tutorials.Scala.installPlay

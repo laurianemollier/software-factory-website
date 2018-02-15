@@ -1,11 +1,12 @@
-package controllers
+package controllers.auth
 
 import javax.inject.Inject
 
 import com.mohiva.play.silhouette.api._
 import com.mohiva.play.silhouette.impl.providers.CredentialsProvider
-import forms.ForgotPasswordForm
-import models.services.{ AuthTokenService, UserService }
+import controllers.{ AssetsFinder, auth }
+import forms.auth.ForgotPasswordForm
+import models.services.auth.{ AuthTokenService, UserService }
 import org.webjars.play.WebJarsUtil
 import play.api.i18n.{ I18nSupport, Messages }
 import play.api.libs.mailer.{ Email, MailerClient }
