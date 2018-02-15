@@ -26,3 +26,10 @@ GET         /account/activate/:token         controllers.auth.ActivateAccountCon
 # Map static resources from the /public folder to the /assets URL path
 GET         /assets/*file                    controllers.Assets.versioned(file)
 ->          /webjars                         webjars.Routes
+
+
+
+GET         /contact                        controllers.pages.Contact.view
+POST        /contact                        controllers.pages.Contact.submit
+
+GET         /scala/install-play             controllers.tutorials.Scala.installPlay

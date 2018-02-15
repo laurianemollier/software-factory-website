@@ -1,0 +1,727 @@
+@import play.api.i18n.Messages
+@import play.api.i18n.Lang
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+@import views.html._
+
+@()(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+
+@layout.layout(Messages("home.title"), None) {
+
+
+
+    <section class="intro_section page_mainslider ds">
+        <div class="flexslider vertical-nav" data-dots="true" data-nav="false">
+            <ul class="slides">
+
+                <li>
+                    <img src="@assets.path("images/mainTemplate/images/slide01.jpg")" alt="">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 text-center">
+                                <div class="slide_description_wrapper">
+                                    <div class="slide_description">
+                                        <div class="intro-layer" data-animation="fadeInUp">
+                                            <p class="small-text big">
+                                                get started with online education
+                                            </p>
+                                        </div>
+                                        <div class="intro-layer" data-animation="fadeInUp">
+                                            <h2>
+                                                Best online learning system
+                                            </h2>
+                                        </div>
+                                        <div class="intro-layer" data-animation="fadeInUp">
+                                            <p class="small-text">
+                                                Donec egestas elementum faucibus. Vivamus vel interdum metus. Nunc commodo dolor
+                                            </p>
+                                        </div>
+                                        <div class="intro-layer" data-animation="fadeInUp">
+                                            <a href="courses.html" class="theme_button color1">
+                                                See all courses
+                                            </a>
+                                        </div>
+                                    </div>
+                                        <!-- eof .slide_description -->
+                                </div>
+                                    <!-- eof .slide_description_wrapper -->
+                            </div>
+                                <!-- eof .col-* -->
+                        </div>
+                            <!-- eof .row -->
+                    </div>
+                        <!-- eof .container -->
+                </li>
+
+                <li>
+                    <img src="@assets.path("images/mainTemplate/images/slide02.jpg")" alt="">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 text-center">
+                                <div class="slide_description_wrapper">
+                                    <div class="slide_description">
+                                        <div class="intro-layer" data-animation="fadeInUp">
+                                            <p class="small-text big">
+                                                Sudy with group of professionals
+                                            </p>
+                                        </div>
+                                        <div class="intro-layer" data-animation="fadeInUp">
+                                            <h2>
+                                                Take great courses from best universities
+                                            </h2>
+                                        </div>
+                                        <div class="intro-layer" data-animation="fadeInUp">
+                                            <p class="small-text">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis libero ipsum.
+                                            </p>
+                                        </div>
+                                        <div class="intro-layer" data-animation="fadeInUp">
+                                            <a href="courses.html" class="theme_button color1">
+                                                See all courses
+                                            </a>
+                                        </div>
+                                    </div>
+                                        <!-- eof .slide_description -->
+                                </div>
+                                    <!-- eof .slide_description_wrapper -->
+                            </div>
+                                <!-- eof .col-* -->
+                        </div>
+                            <!-- eof .row -->
+                    </div>
+                        <!-- eof .container -->
+                </li>
+
+                <li>
+                    <img src="@assets.path("images/mainTemplate/images/slide03.jpg")" alt="">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 text-center">
+                                <div class="slide_description_wrapper">
+                                    <div class="slide_description">
+                                        <div class="intro-layer" data-animation="fadeInUp">
+                                            <p class="small-text big">
+                                                get started with online education
+                                            </p>
+                                        </div>
+                                        <div class="intro-layer" data-animation="fadeInUp">
+                                            <h2>
+                                                Take the first step to knowledge with us
+                                            </h2>
+                                        </div>
+                                        <div class="intro-layer" data-animation="fadeInUp">
+                                            <p class="small-text">
+                                                Nunc nec lectus lacinia, lobortis arcu quis, sodales urna, odio in quam efficitur.
+                                            </p>
+                                        </div>
+                                        <div class="intro-layer" data-animation="fadeInUp">
+                                            <a href="courses.html" class="theme_button color1">
+                                                See all courses
+                                            </a>
+                                        </div>
+                                    </div>
+                                        <!-- eof .slide_description -->
+                                </div>
+                                    <!-- eof .slide_description_wrapper -->
+                            </div>
+                                <!-- eof .col-* -->
+                        </div>
+                            <!-- eof .row -->
+                    </div>
+                        <!-- eof .container -->
+                </li>
+
+            </ul>
+        </div>
+            <!-- eof flexslider -->
+
+    </section>
+
+    <section class="ls section_padding_top_20 section_padding_bottom_10 top_offset_content">
+        <div class="container">
+            <div class="isotope_container isotope row masonry-layout columns_margin_bottom_20">
+                <div class="isotope-item col-lg-4 col-md-6 col-sm-6">
+                    <div class="with_padding rounded overflow_hidden main_bg_color2 after_cover with_radial_highlight hoverable-banner">
+                        <h4 class="text-uppercase semibold">
+                            <span class="number">01</span>
+                            what you get?
+                        </h4>
+                        <p class="bottommargin_25">
+                            Quisque rutrum neque et mauris vulputate tincidunt. Proin vulputate sem in tempus hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <ol class="text-uppercase bold list3 bottommargin_0">
+                            <li>Proin non enim scelerisque</li>
+                            <li>enim et, vehicula enim</li>
+                            <li>Viverra at pulvinar</li>
+                            <li>Nullam auctor purus magna</li>
+                            <li>sed rhoncus est sagittis in</li>
+                            <li>Interdum et</li>
+                        </ol>
+                        <div class="media-links">
+                            <a href="#" class="abs-link"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="isotope-item col-lg-4 col-md-6 col-sm-6">
+                    <div class="with_padding rounded overflow_hidden main_bg_color3 after_cover with_radial_highlight hoverable-banner with_image">
+                        <div class="bg_teaser">
+                            <img src="@assets.path("images/mainTemplate/images/banner1.png")" alt="">
+                        </div>
+                        <h4 class="text-uppercase semibold topmargin_0">
+                            <span class="number">02</span>
+                            Group Seminars
+                        </h4>
+                        <p>
+                            Donec consequat elit eget dui dignissim ultrices. Aliquam ut aliquam eros, eu porta eros.
+                        </p>
+                        <div class="media-links">
+                            <a href="#" class="abs-link"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="isotope-item col-lg-4 col-md-6 col-sm-6">
+                    <div class="with_padding rounded overflow_hidden main_bg_color after_cover with_radial_highlight hoverable-banner with_image">
+                        <div class="bg_teaser">
+                            <img src="@assets.path("images/mainTemplate/images/banner2.png")" alt="">
+                        </div>
+                        <h4 class="text-uppercase semibold topmargin_0">
+                            <span class="number">03</span>
+                            Large library
+                        </h4>
+                        <p>
+                            Nam nec felis laoreet diam pharetra maximus. Etiam scelerisque diam pulvinar ac.
+                        </p>
+                        <div class="media-links">
+                            <a href="#" class="abs-link"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="isotope-item col-lg-4 col-md-6 col-sm-6">
+                    <div class="with_padding rounded overflow_hidden main_bg_color3 after_cover with_radial_highlight hoverable-banner with_image">
+                        <div class="bg_teaser">
+                            <img src="@assets.path("images/mainTemplate/images/banner3.png")" alt="">
+                        </div>
+                        <h4 class="text-uppercase semibold topmargin_0">
+                            <span class="number">04</span>
+                            Trending
+                            <br> courses
+                        </h4>
+                        <p>
+                            Curabitur vel tempus mi. Nunc semper purus metus.  Vestibulum vel risus quis.
+                        </p>
+                        <div class="media-links">
+                            <a href="#" class="abs-link"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="isotope-item col-lg-4 col-md-6 col-sm-6">
+                    <div class="with_padding rounded overflow_hidden main_bg_color4 after_cover with_radial_highlight hoverable-banner with_image">
+                        <div class="bg_teaser">
+                            <img src="@assets.path("images/mainTemplate/images/banner4.png")" alt="">
+                        </div>
+                        <h4 class="text-uppercase semibold topmargin_0">
+                            <span class="number">05</span>
+                            Free online
+                            <br> courses
+                        </h4>
+                        <p>
+                            Morbi non erat ac mi vestibulum hendrerit nec mattis lorem. Suspendisse sagittis.
+                        </p>
+                        <div class="media-links">
+                            <a href="#" class="abs-link"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ls section_padding_top_65 section_padding_bottom_65 columns_margin_bottom_30">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-6">
+                    <p class="small-text big highlight">
+                        Something about us
+                    </p>
+                    <h2 class="section_header">
+                        <span class="number oswald">01</span>
+                        We are the leaders in the online education.
+                    </h2>
+                    <p class="highlight fontsize_16">
+                        <em>Nunc convallis est ac magna tempus, ut commodo libero hendrerit. Integ facilisis ante sit amet lacus hendrerit, id viverra arcu auctor.</em>
+                    </p>
+                    <p>
+                        Cras laoreet id tortor id vestibulum. Nullam sed sagittis quam. Maecenas volutpat tristique magna vitae vulputate. Donec pulvinar ullamcorper nisi, maximus consequat sem porta nec. Nullam tincidunt vel mauris et placerat. Curabitur vehicula pulvinar ante, a tempus eros pellentesque id. Ut convallis elit sed sapien pulvinar, at pellentesque sapien pellentesque.
+                    </p>
+                    <p class="topmargin_50">
+                        <a href="#" class="read-more">read more</a>
+                    </p>
+                </div>
+                <div class="col-md-6 col-lg-offset-1">
+                    <div class="with_pos_button">
+                        <img src="@assets.path("images/mainTemplate/images/about.jpg")" alt="" class="rounded" />
+                        <a href="gallery-regular-4-cols.html" class="theme_button color1 tall_button">
+                            more
+                            <span class="big">Photo</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ds parallax clear_parallax page_features section_padding_top_100 section_padding_bottom_65 columns_margin_bottom_30">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-5 col-lg-4">
+                    <h2 class="section_header big">
+                        <span class="number oswald">02</span>
+                        What we do
+                    </h2>
+                    <hr class="divider_50_3 main_bg_color3">
+                    <p><em>Cras nulla sem, blandit a blandit non, sollicitudin ac massa. Morbi egestas maximus massa, quis ullamcorper justo rutrum non.  Class aptent taciti litora.</em></p>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-5 col-md-offset-1 col-lg-offset-2">
+                    <div class="media teaser ">
+                        <div class="media-left">
+                            <div class="teaser_icon highlight size_normal">
+                                <i class="flaticon-school"></i>
+                            </div>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="highlight">We coach easy</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed fermentum urna. Duis non ullamcorper eros, accumsan congue mauris.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="media teaser">
+                        <div class="media-left">
+                            <div class="teaser_icon highlight3 size_normal">
+                                <i class="flaticon-physics"></i>
+                            </div>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="highlight3">We coach easy</h4>
+                            <p>
+                                In a ipsum id nisl viverra sollicitudin. Cras et tristique ligula, ut molestie ante. Aenean tincidunt magna nec felis tincidunt faucibus. Phasellus ac orci sed mi venenatis egestas.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="media teaser">
+                        <div class="media-left">
+                            <div class="teaser_icon highlight2 size_normal">
+                                <i class="flaticon-rocket"></i>
+                            </div>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="highlight2">We coach easy</h4>
+                            <p>
+                                Ut sit amet nulla non turpis laoreet consequat eu eget dui. Sed ornare metus bibendum convallis luctus. Phasellus laoreet ipsum neque. Nulla facilisi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ls section_padding_top_100 section_padding_bottom_75">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2 class="section_header big">
+                        <span class="number oswald">03</span>
+                        Popular courses
+                    </h2>
+                    <p><em>Sed pellentesque sem et posuere congue. Quisque finibus facilisis quam, quis feugiat tortor bibendum eget. Donec interdum lectus id leo auctor vulputate. Maecenas viverra, arcu eget volutpat posuere dolor.</em></p>
+                </div>
+            </div>
+            <div class="row topmargin_60 columns_margin_bottom_20">
+                <div class="col-lg-4 col-sm-6">
+                    <article class="vertical-item content-padding course rounded hover-content top_rounded overflow_hidden">
+                        <div class="item-media">
+                            <img src="@assets.path("images/mainTemplate/images/courses/01.jpg")" alt="">
+                        </div>
+                        <div class="item-content with_border color_border no_top_border bottom_rounded">
+                            <header class="display-flex">
+                                <div class="rightmargin_10">
+                                    <h4 class="entry-title bottommargin_10">
+                                        Developing Mobile Apps
+                                    </h4>
+                                    <span class="small-text">Technology</span>
+                                </div>
+                                <div>
+                                    <p class="price-big highlight">
+                                        <span class="amount oswald">$19</span>
+                                        <span class="price-text">per week</span>
+                                    </p>
+                                </div>
+                            </header>
+                        </div>
+                        <div class="absolute-content">
+                            <div class="cs bg_teaser after_cover color_bg_1 with_padding rounded">
+                                <img src="@assets.path("images/mainTemplate/images/courses/01.jpg")" alt="">
+                                <header class="display-flex">
+                                    <div class="rightmargin_10">
+                                        <h4 class="entry-title bottommargin_10">
+                                            Developing Mobile Apps
+                                        </h4>
+                                        <span class="small-text">Technology</span>
+                                    </div>
+                                    <div>
+                                        <p class="price-big">
+                                            <span class="amount oswald">$19</span>
+                                            <span class="price-text">per week</span>
+                                        </p>
+                                    </div>
+                                </header>
+                                <div class="entry-content toppadding_30">
+                                    <div>
+                                        <p>
+                                            Sed sit amet pretium lorem. Curabitur sit amet eros sed nisl mattis interdum eu non urna. Suspendisse congue vel erat vel dictum.
+                                        </p>
+                                        <div class="media small-media">
+                                            <div class="media-left media-middle">
+                                                <img src="@assets.path("images/mainTemplate/images/team/01_square.jpg")" alt="" class="round">
+                                            </div>
+                                            <div class="media-body media-middle">
+                                                <span class="small-text">Danny Tucker</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="display-flex content-justify topmargin_10">
+                                        <a href="#" class="theme_button color1 narrow_button rightmargin_10">Learn more</a>
+                                        <a href="#" class="theme_button color1 narrow_button inverse">Buy now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <article class="vertical-item content-padding course rounded hover-content top_rounded overflow_hidden">
+                        <div class="item-media">
+                            <img src="@assets.path("images/mainTemplate/images/courses/02.jpg")" alt="">
+                        </div>
+                        <div class="item-content with_border color2_border no_top_border bottom_rounded">
+                            <header class="display-flex">
+                                <div class="rightmargin_10">
+                                    <h4 class="entry-title bottommargin_10">
+                                        Biomedical imaging
+                                    </h4>
+                                    <span class="small-text">Medicine</span>
+                                </div>
+                                <div>
+                                    <p class="price-big highlight2">
+                                        <span class="amount oswald">$53</span>
+                                        <span class="price-text">per week</span>
+                                    </p>
+                                </div>
+                            </header>
+                        </div>
+                        <div class="absolute-content">
+                            <div class="cs bg_teaser after_cover color_bg_2 with_padding rounded">
+                                <img src="@assets.path("images/mainTemplate/images/courses/02.jpg")" alt="">
+                                <header class="display-flex">
+                                    <div class="rightmargin_10">
+                                        <h4 class="entry-title bottommargin_10">
+                                            Biomedical imaging
+                                        </h4>
+                                        <span class="small-text">Medicine</span>
+                                    </div>
+                                    <div>
+                                        <p class="price-big">
+                                            <span class="amount oswald">$53</span>
+                                            <span class="price-text">per week</span>
+                                        </p>
+                                    </div>
+                                </header>
+                                <div class="entry-content toppadding_30">
+                                    <div>
+                                        <p>
+                                            Sed sit amet pretium lorem. Curabitur sit amet eros sed nisl mattis interdum eu non urna. Suspendisse congue vel erat vel dictum.
+                                        </p>
+                                        <div class="media small-media">
+                                            <div class="media-left media-middle">
+                                                <img src="@assets.path("images/mainTemplate/images/team/01_square.jpg")" alt="" class="round">
+                                            </div>
+                                            <div class="media-body media-middle">
+                                                <span class="small-text">Danny Tucker</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="display-flex content-justify topmargin_10">
+                                        <a href="#" class="theme_button color1 narrow_button rightmargin_10">Learn more</a>
+                                        <a href="#" class="theme_button color1 narrow_button inverse">Buy now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <article class="vertical-item content-padding course rounded hover-content top_rounded overflow_hidden">
+                        <div class="item-media">
+                            <img src="@assets.path("images/mainTemplate/images/courses/03.jpg")" alt="">
+                        </div>
+                        <div class="item-content with_border color3_border no_top_border bottom_rounded">
+                            <header class="display-flex">
+                                <div class="rightmargin_10">
+                                    <h4 class="entry-title bottommargin_10">
+                                        Basic of Nature Photography
+                                    </h4>
+                                    <span class="small-text">Photography</span>
+                                </div>
+                                <div>
+                                    <p class="price-big highlight3">
+                                        <span class="amount oswald">$21</span>
+                                        <span class="price-text">per week</span>
+                                    </p>
+                                </div>
+                            </header>
+                        </div>
+                        <div class="absolute-content">
+                            <div class="cs bg_teaser after_cover color_bg_3 with_padding rounded">
+                                <img src="@assets.path("images/mainTemplate/images/courses/03.jpg")" alt="">
+                                <header class="display-flex">
+                                    <div class="rightmargin_10">
+                                        <h4 class="entry-title bottommargin_10">
+                                            Basic of Nature Photography
+                                        </h4>
+                                        <span class="small-text">Photography</span>
+                                    </div>
+                                    <div>
+                                        <p class="price-big">
+                                            <span class="amount oswald">$21</span>
+                                            <span class="price-text">per week</span>
+                                        </p>
+                                    </div>
+                                </header>
+                                <div class="entry-content toppadding_30">
+                                    <div>
+                                        <p>
+                                            Sed sit amet pretium lorem. Curabitur sit amet eros sed nisl mattis interdum eu non urna. Suspendisse congue vel erat vel dictum.
+                                        </p>
+                                        <div class="media small-media">
+                                            <div class="media-left media-middle">
+                                                <img src="@assets.path("images/mainTemplate/images/team/01_square.jpg")" alt="" class="round">
+                                            </div>
+                                            <div class="media-body media-middle">
+                                                <span class="small-text">Danny Tucker</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="display-flex content-justify topmargin_10">
+                                        <a href="#" class="theme_button color1 narrow_button rightmargin_10">Learn more</a>
+                                        <a href="#" class="theme_button color1 narrow_button inverse">Buy now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <article class="vertical-item content-padding course rounded hover-content top_rounded overflow_hidden">
+                        <div class="item-media">
+                            <img src="@assets.path("images/mainTemplate/images/courses/04.jpg")" alt="">
+                        </div>
+                        <div class="item-content with_border color4_border no_top_border bottom_rounded">
+                            <header class="display-flex">
+                                <div class="rightmargin_10">
+                                    <h4 class="entry-title bottommargin_10">
+                                        Marketing Management
+                                    </h4>
+                                    <span class="small-text">Bussiness</span>
+                                </div>
+                                <div>
+                                    <p class="price-big highlight4">
+                                        <span class="amount oswald">$47</span>
+                                        <span class="price-text">per week</span>
+                                    </p>
+                                </div>
+                            </header>
+                        </div>
+                        <div class="absolute-content">
+                            <div class="cs bg_teaser after_cover color_bg_4 with_padding rounded">
+                                <img src="@assets.path("images/mainTemplate/images/courses/04.jpg")" alt="">
+                                <header class="display-flex">
+                                    <div class="rightmargin_10">
+                                        <h4 class="entry-title bottommargin_10">
+                                            Marketing Management
+                                        </h4>
+                                        <span class="small-text">Bussiness</span>
+                                    </div>
+                                    <div>
+                                        <p class="price-big">
+                                            <span class="amount oswald">$47</span>
+                                            <span class="price-text">per week</span>
+                                        </p>
+                                    </div>
+                                </header>
+                                <div class="entry-content toppadding_30">
+                                    <div>
+                                        <p>
+                                            Sed sit amet pretium lorem. Curabitur sit amet eros sed nisl mattis interdum eu non urna. Suspendisse congue vel erat vel dictum.
+                                        </p>
+                                        <div class="media small-media">
+                                            <div class="media-left media-middle">
+                                                <img src="@assets.path("images/mainTemplate/images/team/01_square.jpg")" alt="" class="round">
+                                            </div>
+                                            <div class="media-body media-middle">
+                                                <span class="small-text">Danny Tucker</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="display-flex content-justify topmargin_10">
+                                        <a href="#" class="theme_button color1 narrow_button rightmargin_10">Learn more</a>
+                                        <a href="#" class="theme_button color1 narrow_button inverse">Buy now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <article class="vertical-item content-padding course rounded hover-content top_rounded overflow_hidden">
+                        <div class="item-media">
+                            <img src="@assets.path("images/mainTemplate/images/courses/05.jpg")" alt="">
+                        </div>
+                        <div class="item-content with_border darkgrey_border no_top_border bottom_rounded">
+                            <header class="display-flex">
+                                <div class="rightmargin_10">
+                                    <h4 class="entry-title bottommargin_10">
+                                        How to write effectively
+                                    </h4>
+                                    <span class="small-text">Bussiness</span>
+                                </div>
+                                <div>
+                                    <p class="price-big text-center">
+                                        <span class="text-uppercase amount oswald highlight3">Free</span>
+                                        <span class="price-text">For month</span>
+                                    </p>
+                                </div>
+                            </header>
+                        </div>
+                        <div class="absolute-content">
+                            <div class="cs bg_teaser after_cover darkgrey_bg with_padding rounded">
+                                <img src="@assets.path("images/mainTemplate/images/courses/05.jpg")" alt="">
+                                <header class="display-flex">
+                                    <div class="rightmargin_10">
+                                        <h4 class="entry-title bottommargin_10">
+                                            How to write effectively
+                                        </h4>
+                                        <span class="small-text">Bussiness</span>
+                                    </div>
+                                    <div>
+                                        <p class="price-big text-center">
+                                            <span class="text-uppercase amount oswald">Free</span>
+                                            <span class="price-text">For month</span>
+                                        </p>
+                                    </div>
+                                </header>
+                                <div class="entry-content toppadding_30">
+                                    <div>
+                                        <p>
+                                            Sed sit amet pretium lorem. Curabitur sit amet eros sed nisl mattis interdum eu non urna. Suspendisse congue vel erat vel dictum.
+                                        </p>
+                                        <div class="media small-media">
+                                            <div class="media-left media-middle">
+                                                <img src="@assets.path("images/mainTemplate/images/team/01_square.jpg")" alt="" class="round">
+                                            </div>
+                                            <div class="media-body media-middle">
+                                                <span class="small-text">Danny Tucker</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="display-flex content-justify topmargin_10">
+                                        <a href="#" class="theme_button color1 narrow_button rightmargin_10">Learn more</a>
+                                        <a href="#" class="theme_button color1 narrow_button inverse">Buy now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <article class="vertical-item content-padding course rounded hover-content top_rounded overflow_hidden">
+                        <div class="item-media">
+                            <img src="@assets.path("images/mainTemplate/images/courses/06.jpg")" alt="">
+                        </div>
+                        <div class="item-content with_border color_border no_top_border bottom_rounded">
+                            <header class="display-flex">
+                                <div class="rightmargin_10">
+                                    <h4 class="entry-title bottommargin_10">
+                                        Psychology Relationship
+                                    </h4>
+                                    <span class="small-text">psychology</span>
+                                </div>
+                                <div>
+                                    <p class="price-big highlight">
+                                        <span class="amount oswald">$30</span>
+                                        <span class="price-text">per week</span>
+                                    </p>
+                                </div>
+                            </header>
+                        </div>
+                        <div class="absolute-content">
+                            <div class="cs bg_teaser after_cover color_bg_1 with_padding rounded">
+                                <img src="@assets.path("images/mainTemplate/images/courses/06.jpg")" alt="">
+                                <header class="display-flex">
+                                    <div class="rightmargin_10">
+                                        <h4 class="entry-title bottommargin_10">
+                                            Psychology Relationship
+                                        </h4>
+                                        <span class="small-text">psychology</span>
+                                    </div>
+                                    <div>
+                                        <p class="price-big">
+                                            <span class="amount oswald">$30</span>
+                                            <span class="price-text">per week</span>
+                                        </p>
+                                    </div>
+                                </header>
+                                <div class="entry-content toppadding_30">
+                                    <div>
+                                        <p>
+                                            Sed sit amet pretium lorem. Curabitur sit amet eros sed nisl mattis interdum eu non urna. Suspendisse congue vel erat vel dictum.
+                                        </p>
+                                        <div class="media small-media">
+                                            <div class="media-left media-middle">
+                                                <img src="@assets.path("images/mainTemplate/images/team/01_square.jpg")" alt="" class="round">
+                                            </div>
+                                            <div class="media-body media-middle">
+                                                <span class="small-text">Danny Tucker</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="display-flex content-justify topmargin_10">
+                                        <a href="#" class="theme_button color1 narrow_button rightmargin_10">Learn more</a>
+                                        <a href="#" class="theme_button color1 narrow_button inverse">Buy now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+}
+
+
