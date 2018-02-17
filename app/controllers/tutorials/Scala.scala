@@ -36,8 +36,8 @@ class Scala @Inject() (
   implicit val lang: Lang = langs.availables.head
 
   def installPlay: Action[AnyContent] = Action.async { implicit request =>
-    //    Future.successful(Ok(views.html.tutorials.installPlay.installPlay()))
-    Future.successful(Ok(views.html.tutorials.course.course()))
+    Future.successful(Ok(views.html.tutorials.installPlay.installPlay()))
+    //    Future.successful(Ok(views.html.tutorials.course.course()))
   }
 
 }
