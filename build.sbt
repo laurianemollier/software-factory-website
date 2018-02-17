@@ -75,5 +75,9 @@ ScalariformKeys.preferences := ScalariformKeys.preferences.value
   .setPreference(DanglingCloseParenthesis, Preserve)
 
 
+includeFilter in (Assets, LessKeys.less) := "*.less"
+
+excludeFilter in (Assets, LessKeys.less) := "_*.less"
+
 
 herokuAppName in Compile := "software-factory"
