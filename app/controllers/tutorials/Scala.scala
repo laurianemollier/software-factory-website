@@ -40,4 +40,8 @@ class Scala @Inject() (
     //    Future.successful(Ok(views.html.tutorials.course.course()))
   }
 
+  def course: Action[AnyContent] = Action.async { implicit request =>
+    Future.successful(Ok(views.html.tutorials.course.course()))
+  }
+
 }
