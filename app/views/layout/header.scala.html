@@ -1,4 +1,10 @@
-@(user: Option[models.User] = None)(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarAssets: WebJarAssets)
+@import play.api.i18n.Messages
+@import play.api.i18n.Lang
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+
+@(user: Option[models.User] = None)(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
 
 <header class="page_header header_white toggler_right">
     <div class="container">

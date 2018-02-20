@@ -1,4 +1,10 @@
-@()(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarAssets: WebJarAssets)
+@import play.api.i18n.Messages
+@import play.api.i18n.Lang
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+
+@()(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
 
 
 <article class="vertical-item content-padding course rounded hover-content top_rounded overflow_hidden">

@@ -1,6 +1,20 @@
+@import play.api.data.Form
+@import play.api.i18n.Messages
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+@import com.mohiva.play.silhouette.impl.providers.SocialProviderRegistry
+@import views.html.b3
+@import views.html.b3.inline.fieldConstructor
+@import views.html.helper
+@import views.html.main
 @import forms.ContactData
+@import play.api.i18n.Lang
 
-@(contactForm: Form[ContactData])(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarAssets: WebJarAssets)
+@import views.html._
+
+@(contactForm: Form[ContactData])(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+
 
 @layout.layout(Messages("home.title"), None) {
 

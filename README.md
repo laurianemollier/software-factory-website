@@ -1,30 +1,30 @@
-Play 2.5 Silhouette 4.0 Slick PostgreSQL seed
+Silhouette Seed Template
 =====================================
 
-This seed is based on [Play Silhouette seed](https://github.com/mohiva/play-silhouette-seed), but modified to work with PostgreSQL and Slick instead of InMemory database.
+The Silhouette Seed project is an Activator template which shows how [Silhouette](https://github.com/mohiva/play-silhouette) can be implemented in a Play Framework application. It's a starting point which can be extended to fit your needs.
+
+## Example
+
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+(The "Build App" phase will take a few minutes)
+
+Or you can find a running example of this template under the following URL: https://play-silhouette-seed.herokuapp.com/
 
 ## Features
 
 * Sign Up
 * Sign In (Credentials)
+* Social Auth (Facebook, Google+, VK, Twitter, Xing, Yahoo)
 * Dependency Injection with Guice
 * Publishing Events
 * Avatar service
-* Social Auth (Facebook, Google+, VK, Twitter, Xing, Yahoo)
-* Two-factor authentication with Clef
 * Remember me functionality
 * Password reset/change functionality
 * Account activation functionality
 * Email sending and auth token cleanup
-* [Security headers](https://www.playframework.com/documentation/2.5.x/SecurityHeaders)
-* [CSRF Protection](https://www.playframework.com/documentation/2.5.x/ScalaCsrf)
-
-## Planned Features
-
-* Find a way to achieve accessing routes from templates without writing whole `@controllers.auth.routes.SignInController.view` but writing something shorter
-* Find out about Scala.js VS Coffeescript (or something similar)
-* In case Scala.js wins - implement Scala.js support (including scalatags and scala.css)
-* In case Coffeescript wins - implement elixir ([see Laravel Elixir](https://laravel.com/docs/master/elixir)) compilation of asset files
+* [Security headers](https://www.playframework.com/documentation/2.4.x/SecurityHeaders)
+* [CSRF Protection](https://www.playframework.com/documentation/2.4.x/ScalaCsrf)
 
 ## Documentation
 
@@ -32,15 +32,7 @@ Consult the [Silhouette documentation](http://silhouette.mohiva.com/docs) for mo
 
 ## Activator
 
-[Activator Template](https://www.lightbend.com/activator/template/play-silhouette-4.0-slick-postgres-seed)
-
-## Getting Started
-
-* Install from activator template or clone this repository
-* Copy `database.conf.example` to `database.conf` and fill in your database connection data
-* Copy `mailer.conf.example` to `mailer.conf` and fill in your mailer settings
-* Copy `silhouette.conf.example` to `silhouette.conf` and fill in with your silhouette settings
-* Run project
+See https://typesafe.com/activator/template/play-silhouette-seed
 
 # License
 

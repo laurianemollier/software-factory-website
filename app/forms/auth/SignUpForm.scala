@@ -2,7 +2,6 @@ package forms.auth
 
 import play.api.data.Form
 import play.api.data.Forms._
-
 /**
  * The form which handles the sign up process.
  */

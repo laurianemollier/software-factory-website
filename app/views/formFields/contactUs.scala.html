@@ -1,12 +1,25 @@
-@import helper._
+@import play.api.data.Form
+@import play.api.i18n.Messages
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+@import com.mohiva.play.silhouette.impl.providers.SocialProviderRegistry
+@import views.html.b3
+@import views.html.b3.inline.fieldConstructor
+@import views.html.helper
+@import views.html.main
+@import forms.ContactData
+@import play.api.i18n.Lang
+
+@import views.html.helper
 @import utils.Helpers._
 
 @import forms.ContactData
 
-@(contactForm: Form[ContactData])(implicit message: RequestHeader, messages: Messages, lang: Lang, webJarAssets: WebJarAssets)
+@(contactForm: Form[ContactData])(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
 
-@form(action = controllers.pages.routes.Contact.submit(), args = 'class -> "contact-form cs parallax", 'role -> "form", 'id -> "contactForm") {
-    @CSRF.formField
+@helper.form(action = controllers.pages.routes.Contact.submit(), args = 'class -> "contact-form cs parallax", 'role -> "form", 'id -> "contactForm") {
+    @helper.CSRF.formField
 
     <div class="row">
 
@@ -21,7 +34,7 @@
             <p class="form-group">
                 <label for="email">Email address<span class="required">*</span></label>
                 <i class="fa fa-envelope black" aria-hidden="true"></i>
-                @inputText(contactForm("email"),
+                @helper.inputText(contactForm("email"),
                     args = 'class -> "form-control",
                     'id -> "emailContact",
                     'placeholder -> messages("form.enter-your-email"),
@@ -39,7 +52,7 @@
             <p class="contact-form-message form-group">
                 <label for="message">Message</label>
                 <i class="fa fa-comment black" aria-hidden="true"></i>
-                @textarea(contactForm("text"),
+                @helper.textarea(contactForm("text"),
                     args = 'class -> "form-control",
                     'id -> "textContact",
                     'placeholder -> messages("form.contactForm.enter-your-message"),
