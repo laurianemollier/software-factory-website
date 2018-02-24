@@ -15,7 +15,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <div class="romana_section_title">
+                <div class="course_part_title">
                     <h2> Installer Play Framework</h2>
                 </div>
             </div>
@@ -28,20 +28,21 @@
 
 <article class="single-post vertical-item post">
     <div class="item-content">
-        <header class="entry-header">
-            <p>
+        <header class="entry-header text-course">
+            <p class="text-course">
                 L'installation de sbt se fait en deux temps
             </p>
 
             <div class="inline-block">
-                <ul class="list2 grey">
-                    <li>Installer Java</li>
+                <ul class="list2 small-highlight leftmargin_30">
+                    <li>Installer Java <span class="light">
+                        (du moins vérifier que la JDK 1.8 est bien installée)</span></li>
                     <li>Installer Sbt</li>
 
                 </ul>
             </div>
             <p>
-               Alors c'est partie!
+                Alors c'est partie!
             </p>
         </header>
     </div>
@@ -58,55 +59,88 @@
                 Installer Java
             </h1>
 
-            <p class="entry-meta small-text inline-content">
-                <span>
-                    <a href="#">Classroom</a>
-                </span>
-                <span class="greylinks">
-                    <a href="#">Emily Spencer</a>
-                </span>
-            </p>
-
-
+            @*<p class="entry-meta small-text inline-content">*@
+            @*<span>*@
+            @*<a href="#">Classroom</a>*@
+            @*</span>*@
+            @*<span class="greylinks">*@
+            @*<a href="#">Emily Spencer</a>*@
+            @*</span>*@
+            @*</p>*@
 
 
         </header>
 
-        <div class="entry-content">
+        <div class="entry-content text-course">
             <p>
-                Pour fonctionner, Play framework a besoin de Java 1.8.  </p>
+                Pour fonctionner, Play framework a besoin de <span class="small-highlight">Java 1.8.</span>  </p>
             <p>
-                Pour vérifier que nous avons bien la bonne de JDK, tapons en ligne de commande:
+                Pour vérifier que nous avons bien la bonne de JDK, ouvrons un terminal et
+                <span class="small-highlight">tapons en ligne de commande:</span>
             </p>
             @widgets.course.code(bash) {
                 java -version
             }
-
-            <p>
-                Si quelque chose comme ça s’affiche, c’est que tout est bon!
-            </p>
+            <div class="topmargin_20">
+                <p>
+                    Si quelque chose comme ça s’affiche, c’est que <span class="highlight">tout est bon!</span>
+                </p>
+            </div>
             @widgets.course.code(bash) {
                 java version "1.8.0_121"
                 Java(TM) SE Runtime Environment (build 1.8.0_121-b13)
                 Java HotSpot(TM) 64-Bit Server VM (build 25.121-b13, mixed mode)
             }
 
+            <div class="topmargin_40">
+                <div class="row ">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-6">
+                        <button class=" theme_button color inverse" data-toggle="collapse" data-target="#collapsible" aria-expanded="false">
+                            Je n'ai pas la bonne version</button>
+                    </div>
+                </div>
+            </div>
 
-            <p>
-                Sinon, c’est que tu n’as pas de JDK, ou alors pas la bonne version. Il faut donc aller l’installer. <br/>
-                Toutes les infos se trouvent sur
-                    <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank"> le site internet d’Oracle </a>
-            </p>
+            <div class="collapse" id="collapsible">
+                <div class="topmargin_20">
+                    <p>
+                        Sinon, c’est que tu n’as pas de JDK, ou alors pas la bonne version. Il faut donc aller l’installer. <br/>
+                        Toutes les infos se trouvent sur
+                        <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">
+                            le site internet d’Oracle </a>
+                    </p>
+                </div>
 
-            @widgets.course.os_instructions()
+                <div class="topmargin_20">
+                @widgets.course.os_instructions()
+                </div>
+
+            </div>
 
 
             </div>
 
 
-
     </div>
 </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -120,17 +154,18 @@
             <header class="entry-header">
 
                 <h1 class="entry-title topmargin_0">
-                    Shankle doner ribeye ham hock shank
+                    Installer Sbt
                 </h1>
 
-                <p class="entry-meta small-text inline-content">
-                    <span>
-                        <a href="#">Classroom</a>
-                    </span>
-                    <span class="greylinks">
-                        <a href="#">Emily Spencer</a>
-                    </span>
-                </p>
+                @*<p class="entry-meta small-text inline-content">*@
+                @*<span>*@
+                @*<a href="#">Classroom</a>*@
+                @*</span>*@
+                @*<span class="greylinks">*@
+                @*<a href="#">Emily Spencer</a>*@
+                @*</span>*@
+                @*</p>*@
+
 
             </header>
                 <!-- .entry-header -->
