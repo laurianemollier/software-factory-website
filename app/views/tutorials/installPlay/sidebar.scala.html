@@ -3,39 +3,31 @@
 @import play.api.mvc.RequestHeader
 @import org.webjars.play.WebJarsUtil
 @import controllers.AssetsFinder
+@import views.html._
 
 @()(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
 
 
-<div class="row vertical-tabs">
-    <div class="col-sm-12">
+@widgets.course.summary.summary(true)
 
-            <!-- Nav tabs -->
-        <ul class="nav" role="tablist">
-            <li class="">
-                <a href="scala/install-play">
-                    At vero eos et accusam?</a>
-            </li>
-            <li class="">
-                <a href="scala/install-play">
-                    Justo duo dolores et ea rebum?</a>
-            </li>
-            <li class="active">
-                <a href="scala/install-play">
-                    Stet clita kasd gubergren?</a>
-            </li>
-        </ul>
 
+
+
+<section class="ls section_padding_top_50">
+    <div class="container">
+    @widgets.course.progress_bar(20.5)
     </div>
-</div>
+</section>
+
+@*<section class="ls section_padding_top_50">*@
+    @*<div class="container">*@
+    @*@widgets.course.summary_instructions()*@
+    @*</div>*@
+@*</section>*@
 
 
-<div class="widget widget_categories">
 
-    <h3 class="widget-title">Course Progress</h3>
-    <div class="progress">
-        <div class="progress-bar" role="progressbar" data-transitiongoal="50" aria-valuenow="50" style="width: 50%;">
-        </div>
-    </div>
-</div>
+
+
+
 

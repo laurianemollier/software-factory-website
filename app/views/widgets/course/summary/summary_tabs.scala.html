@@ -1,0 +1,33 @@
+@import play.api.i18n.Messages
+@import play.api.i18n.Lang
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+
+@import views.html._
+
+
+@()(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+
+
+<!-- Nav tabs -->
+<ul class="nav" role="tablist">
+    <li class="">
+        <a href="scala/install-play">
+            <mark>Étape 1: </mark>
+            Installer play framework
+        </a>
+    </li>
+    <li class="">
+        <a href="scala/install-play">
+            <mark>Étape 2: </mark>
+            Choisir une seed
+        </a>
+    </li>
+    <li class="active">
+        <a href="scala/install-play">
+            <mark>Étape 3: </mark>
+            Connecter notre seed à une base de donnée
+        </a>
+    </li>
+</ul>

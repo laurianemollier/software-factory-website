@@ -9,6 +9,7 @@ version := "1.0.0"
 scalaVersion := "2.12.4"
 
 resolvers += Resolver.jcenterRepo
+resolvers += Resolver.sbtPluginRepo("releases")
 
 resolvers += "Sonatype snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/"
 

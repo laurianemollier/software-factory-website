@@ -1,0 +1,67 @@
+@import play.api.i18n.Messages
+@import play.api.i18n.Lang
+@import play.api.mvc.RequestHeader
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+@import enums.ProgLang._
+@import views.html._
+
+
+@()(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active">
+        <a href="#ubuntu-tab" role="tab" data-toggle="tab" aria-expanded="true">
+            <i class="rt-icon2-heart-outline"></i> Ubuntu </a>
+    </li>
+    <li class="">
+        <a href="#tab5" role="tab" data-toggle="tab" aria-expanded="false">
+            <i class="fa fa-paw"></i> Comfort</a>
+    </li>
+    <li class="">
+        <a href="#tab6" role="tab" data-toggle="tab" aria-expanded="false">
+            <i class="rt-icon2-star-outline"></i>Results</a>
+    </li>
+</ul>
+
+
+
+
+<div class="tab-content ">
+    <div class="tab-pane fade active in" id="ubuntu-tab">
+
+        <p>
+                Sur ma machine ubuntu 14…, j’ai du faire:
+        </p>
+
+        @widgets.course.code(bash) {
+            sudo apt-get update
+            sudo apt-get -y install default-jre
+            sudo apt-get -y install default-jdk
+        }
+
+
+    </div>
+    <div class="tab-pane fade" id="tab5">
+        <p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.
+        </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, enim saepe libero iure tenetur optio nisi aliquam molestias ratione magnam ab ut quod possimus hic suscipit doloremque, deleniti ipsa quia!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, enim saepe libero iure tenetur optio nisi aliquam molestias ratione magnam ab ut quod possimus hic suscipit doloremque, deleniti ipsa quia!</p>
+    </div>
+    <div class="tab-pane fade" id="tab6">
+        <p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.
+        </p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis est, dolores, ex ducimus cumque iusto ipsam odit voluptatum autem error impedit obcaecati quisquam molestiae, optio porro inventore nostrum deleniti cupiditate.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis est, dolores, ex ducimus cumque iusto ipsam odit voluptatum autem error impedit obcaecati quisquam molestiae, optio porro inventore nostrum deleniti cupiditate.</p>
+    </div>
+</div>

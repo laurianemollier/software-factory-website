@@ -14,8 +14,6 @@ import slick.jdbc.JdbcProfile
 import slick.jdbc.JdbcBackend
 import slick.lifted.TableQuery
 
-import slick.lifted.Query
-
 import scala.concurrent.ExecutionContext.Implicits.global
 import models.daos.auth.PasswordInfoDAO._
 import models.tables.auth.{ DbPasswordInfo, PasswordInfoTable }
