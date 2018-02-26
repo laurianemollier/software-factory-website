@@ -3,71 +3,34 @@
 @import play.api.mvc.RequestHeader
 @import org.webjars.play.WebJarsUtil
 @import controllers.AssetsFinder
-@import enums.ProgLang._
+@import enums.OS
+@import play.twirl.api.Html
 @import views.html._
 
 
-@()(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+
+@(instructions: List[(OS, Html)], id: String)(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
 
 <ul class="nav nav-tabs" role="tablist">
-    <li class="active">
-        <a href="#ubuntu-tab" role="tab" data-toggle="tab" aria-expanded="true">
-            <i class="rt-icon2-heart-outline"></i> Ubuntu </a>
+    @instructions.zipWithIndex.map { case ((os, html), index) =>
+    <li class="@if(index == 0) {active}">
+        <a href="#@os.name-tab@id" role="tab" data-toggle="tab" aria-expanded="true">
+            @*<i class="rt-icon2-heart-outline"></i>*@
+            @os.name
+
+    </a>
     </li>
-    <li class="">
-        <a href="#tab5" role="tab" data-toggle="tab" aria-expanded="false">
-            <i class="fa fa-paw"></i> Comfort</a>
-    </li>
-    <li class="">
-        <a href="#tab6" role="tab" data-toggle="tab" aria-expanded="false">
-            <i class="rt-icon2-star-outline"></i>Results</a>
-    </li>
+
+    }
 </ul>
 
 
-
-
 <div class="tab-content ">
-    <div class="tab-pane fade active in" id="ubuntu-tab">
 
-        <p>
-            Pour une machine ubuntu, voici les lignes de code à taper en ligne de commande
-                <span class="light"> (Ce sont les commandes pour une machine virtuelle vierge)</span>
-        </p>
-
-        @widgets.course.code(bash) {
-            sudo apt-get update
-            sudo apt-get -y install default-jre
-            sudo apt-get -y install default-jdk
-        }
-
-        <p>
-            Si après ces commandes, tu n'as toujours pas la bonne version de Java, va faire un tour sur
-                <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">
-                    le site d’Oracle </a>.
-        </p>
-
+@instructions.zipWithIndex.map { case ((os, html), index) =>
+    <div class="tab-pane fade @if(index == 0) { active  in}" id="@os.name-tab@id">
+    @html
     </div>
-    <div class="tab-pane fade" id="tab5">
-        <p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.
-        </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, enim saepe libero iure tenetur optio nisi aliquam molestias ratione magnam ab ut quod possimus hic suscipit doloremque, deleniti ipsa quia!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, enim saepe libero iure tenetur optio nisi aliquam molestias ratione magnam ab ut quod possimus hic suscipit doloremque, deleniti ipsa quia!</p>
-    </div>
-    <div class="tab-pane fade" id="tab6">
-        <p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.
-        </p>
+}
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis est, dolores, ex ducimus cumque iusto ipsam odit voluptatum autem error impedit obcaecati quisquam molestiae, optio porro inventore nostrum deleniti cupiditate.</p>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis est, dolores, ex ducimus cumque iusto ipsam odit voluptatum autem error impedit obcaecati quisquam molestiae, optio porro inventore nostrum deleniti cupiditate.</p>
-    </div>
 </div>

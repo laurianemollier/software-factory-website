@@ -5,6 +5,8 @@
 @import controllers.AssetsFinder
 @import views.html._
 @import enums.ProgLang._
+@import enums.OS._
+@import play.twirl.api.Html
 
 @()(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
 
@@ -113,7 +115,33 @@
                 </div>
 
                 <div class="topmargin_20">
-                @widgets.course.os_instructions()
+
+                    @ubuntuContent = {
+                        <p>
+                            Pour une machine ubuntu, voici les lignes de code à taper en ligne de commande
+                            <span class="light">(Ce sont les commandes pour une machine virtuelle vierge)</span>
+                        </p>
+
+                    @widgets.course.code(bash) {
+                        sudo apt -get update
+                        sudo apt -get - y install default - jre
+                        sudo apt -get - y install default - jdk
+                    }
+
+                        <p>
+                            Si après ces commandes, tu n'as toujours pas la bonne version de Java, va faire un tour sur
+                            <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank">
+                                le site d’Oracle
+                            </a>
+                            .
+                        </p>
+                    }
+
+                    @macContent = {
+                        <p>démerde toi!!! ahahah</p>
+                    }
+
+                    @widgets.course.os_instructions(List((ubuntu, ubuntuContent), (mac, macContent)), "install-jdk")
                 </div>
 
             </div>
@@ -207,8 +235,6 @@
     case class Coucou()
     case class Coucou()
 }
-
-@widgets.course.os_instructions()
 
 @widgets.course.author()
 
