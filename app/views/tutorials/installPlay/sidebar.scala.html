@@ -5,13 +5,11 @@
 @import controllers.AssetsFinder
 @import views.html._
 
-@()(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+@import models.widgets.course.summary.SummaryWidget
+@(summary: SummaryWidget)(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
 
 
-@widgets.course.summary.summary(List(
-    ("Installer play framework", controllers.tutorials.routes.Scala.installPlay),
-    ("Choisir une seed", controllers.tutorials.routes.Scala.installPlay),
-    ("Connecter notre seed à une base de donnée", controllers.tutorials.routes.Scala.installPlay)), 0, true)
+@widgets.course.summary.summary(summary, true)
 
 
 

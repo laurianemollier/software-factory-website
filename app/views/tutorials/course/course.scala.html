@@ -3,11 +3,11 @@
 @import play.api.mvc.RequestHeader
 @import org.webjars.play.WebJarsUtil
 @import controllers.AssetsFinder
-
+@import play.api.mvc.Call
 @import views.html._
+@import models.widgets.course.summary.SummaryWidget
 
-
-@()(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+@(summary: SummaryWidget)(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
 
 
 
@@ -39,10 +39,7 @@
     </div>
 
     <section class="ls topmargin_90">
-    @widgets.course.summary.summary(List(
-        ("Installer play framework", controllers.tutorials.routes.Scala.installPlay),
-        ("Choisir une seed", controllers.tutorials.routes.Scala.installPlay),
-        ("Connecter notre seed à une base de donnée", controllers.tutorials.routes.Scala.installPlay)), -1)
+    @widgets.course.summary.summary(summary)
     </section>
 
 

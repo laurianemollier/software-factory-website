@@ -3,16 +3,15 @@
 @import play.api.mvc.RequestHeader
 @import org.webjars.play.WebJarsUtil
 @import controllers.AssetsFinder
-@import play.api.mvc.Call
+@import models.widgets.course.summary.SummaryWidget
 
-
-@(parts: List[(String, Call)], active: Int)(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+@(summary: SummaryWidget)(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
 
 
 <!-- Nav tabs -->
 <ul class="nav" role="tablist">
-    @parts.zipWithIndex.map { case ((title, call), index) =>
-    <li class="@if(index == active) {active}">
+    @summary.parts.zipWithIndex.map { case ((title, call), index) =>
+    <li class="@if(summary.active.isDefined && summary.active.get == index) {active}">
         <a href="@call">
             <mark>Étape @(index + 1): </mark>
             @title
