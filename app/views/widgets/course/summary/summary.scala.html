@@ -3,11 +3,11 @@
 @import play.api.mvc.RequestHeader
 @import org.webjars.play.WebJarsUtil
 @import controllers.AssetsFinder
-
+@import play.api.mvc.Call
 @import views.html._
 
 
-@(aside: Boolean = false)(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+@(parts: List[(String, Call)], active: Int = 0, aside: Boolean = false)(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
 
 
 @if(aside) {
@@ -24,7 +24,7 @@
 
         <div class="row vertical-tabs">
 
-        @widgets.course.summary.summary_tabs()
+        @widgets.course.summary.summary_tabs(parts, active)
 
         </div>
     </div>
@@ -43,7 +43,7 @@
         <div class="row vertical-tabs">
             <div class="col-sm-3"></div>
             <div class="col-sm-6">
-            @widgets.course.summary.summary_tabs()
+            @widgets.course.summary.summary_tabs(parts, active)
             </div>
 
         </div>

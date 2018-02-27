@@ -3,11 +3,12 @@
 @import play.api.mvc.RequestHeader
 @import org.webjars.play.WebJarsUtil
 @import controllers.AssetsFinder
+@import play.twirl.api.Html
 
 @import views.html._
 
 
-@()(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+@(goals: List[String])(goalDescription: Html)(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
 
 
 
@@ -54,7 +55,6 @@
                     </div>
                 </div>
 
-
             </div>
                 <!-- Column End -->
             <div class="col-sm-6">
@@ -63,70 +63,20 @@
                         Le but du tutoriel
                     </h2>
                     <p class="topmargin_10 text-course">
-                        Dans ce tutoriel, nous allons installer, construire et mettre en ligne un site internet avec
-                        <a href="https://www.playframework.com/" target="_blank">Play Framework - Scala.</a>
-                        <br>
-                        Notre site internet aura pour fonctionnalités:
-
+                        @goalDescription
                     </p>
                     <div class="about_list">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <a>Connection</a>
-                            </div>
-                            <div class="col-sm-6">
-                                <a>Activation du compte</a>
-                            </div>
+                        @goals.zipWithIndex.map { case (text, index) =>
+                            @if(index % 2 == 0) {
+                                <div class="row">
+                                }
+                        <div class="col-sm-6">
+                            <a>@text</a>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <a>Connection via Facebook</a>
-                            </div>
-                            <div class="col-sm-6">
-                                <a>Changer du mot de passe</a>
-                            </div>
-                        </div>
+                            @if(index % 2 == 1) { </div>}
 
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <a>Connection via Google+</a>
-                            </div>
-                            <div class="col-sm-6">
-                                <a>Mot de passe oublié</a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <a>Inscription</a>
-                            </div>
-                            <div class="col-sm-6">
-                                <a>Base de donner SQL</a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <a>Inscription via Facebook</a>
-                            </div>
-                            <div class="col-sm-6">
-                                <a>Serveur mail</a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <a>Inscription via Google+</a>
-                            </div>
-                            <div class="col-sm-6">
-                                <a>Protection CSRF</a>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <a>Se souvenir de moi</a>
-                            </div>
-                            <div class="col-sm-6">
-                                <a>Security Headers</a>
-                            </div>
-                        </div>
+                        }
+
                     </div>
                 </div>
             </div>

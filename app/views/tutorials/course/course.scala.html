@@ -9,6 +9,11 @@
 
 @()(implicit request: RequestHeader, messages: Messages, lang: Lang, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
 
+
+
+
+
+
 @layout.layout(Messages("home.title"), None) {
 
     <div class="ls topmargin_60">
@@ -17,15 +22,28 @@
 
 
     <div class="ls topmargin_90">
-    @widgets.course.summary.goal()
+
+        @widgets.course.summary.goal(List("Connection", "Activation du compte",
+            "Connection via Facebook", "Changer du mot de passe",
+            "Connection via Google+", "Mot de passe oublié",
+            "Inscription", "Base de donner SQL",
+            "Inscription via Facebook", "Serveur mail",
+            "Inscription via Google+", "Protection CSRF",
+            "Se souvenir de moi", "Security Headers")){
+
+            Dans ce tutoriel, nous allons installer, construire et mettre en ligne un site internet avec
+            <a href="https://www.playframework.com/" target="_blank">Play Framework - Scala.</a>
+            <br>
+            Notre site internet aura pour fonctionnalités:
+        }
     </div>
 
-
     <section class="ls topmargin_90">
-        @widgets.course.summary.summary()
+    @widgets.course.summary.summary(List(
+        ("Installer play framework", controllers.tutorials.routes.Scala.installPlay),
+        ("Choisir une seed", controllers.tutorials.routes.Scala.installPlay),
+        ("Connecter notre seed à une base de donnée", controllers.tutorials.routes.Scala.installPlay)), -1)
     </section>
-
-
 
 
     <div class="romana_cta2_area topmargin_90">
@@ -41,7 +59,7 @@
                                 <div class="cta_btn">
                                     <a href="contact.html" class="common_btn hvr-sweep-to-bottom">
                                         C'est parti!
-                                            <i class="icofont icofont-long-arrow-right"></i>
+                                        <i class="icofont icofont-long-arrow-right"></i>
                                     </a>
                                 </div>
                             </div>
