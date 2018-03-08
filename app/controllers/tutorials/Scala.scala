@@ -41,6 +41,9 @@ class Scala @Inject() (
     ("Choisir une seed", controllers.tutorials.routes.Scala.installPlay),
     ("Connecter notre seed à une base de donnée", controllers.tutorials.routes.Scala.installPlay))
 
+
+
+
   def course: Action[AnyContent] = Action.async { implicit request =>
     val summary = SummaryWidget(parts, None)
     Future.successful(Ok(views.html.tutorials.course.course(summary)))
